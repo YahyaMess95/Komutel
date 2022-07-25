@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <style>
+      input{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;}
+
+    button{
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <center>
+     <h1>Test Komutel Partie 1</h1>
+     <input type="number" id="DateNaissance" pattern="2022" onkeyup="verifications()"> 
+  <br>
+
+     
+     <p id="valueDateNaissance"></p> 
+    </center>
+     <script> 
+   
+
+
+function verifications()
+{
+  let inputValue =document.getElementById("DateNaissance").value;
+  const nextYear =new Date().getFullYear()+0001;
+  const currentYear =new Date().getFullYear();
+
+if (1000 > inputValue || inputValue  >9999){ document.getElementById("valueDateNaissance").innerHTML = "<p style='color:red;'> Vous devez mettre un valeur de 4 chiffres !!</p>" ;
+} else { 
+  
+
+
+  if( inputValue > currentYear )
+         {
+
+          document.getElementById("valueDateNaissance").innerHTML = "<p style='color:red;'> Vous devez mettre une date inférieure ou égale a cette année !!</p>" ;
+
+         }
+
+
+         let age=nextYear-inputValue;
+            if (inputValue<=currentYear) {
+               document.getElementById("valueDateNaissance").innerHTML = "<p> L'age qu'une personne est née en <b>"+inputValue +"</b> aura en <b>" + nextYear +"</b> est <b>" +age+"</b></p>" ;
+            }
+
+
+}
+
+
+      
+
+      
+
+}
+
+
+
+
+
+       function getValueInput () {
+         let inputValue =document.getElementById("DateNaissance").value;
+            const nextYear =new Date().getFullYear()+0001;
+            const currentYear =new Date().getFullYear();
+
+         if( inputValue > currentYear )
+         {
+
+          document.getElementById("valueDateNaissance").innerHTML = "<p style='color:red;'> Vous devez mettre une date inférieure ou égale a cette année !!</p>" ;
+
+         }
+
+
+         if( inputValue > currentYear )
+         {
+
+          document.getElementById("valueDateNaissance").innerHTML = "<p style='color:red;'> Vous devez mettre une date inférieure ou égale a cette année !!</p>" ;
+
+         }
+
+
+
+
+
+
+
+            let age=nextYear-inputValue;
+            if (inputValue<=currentYear) {
+               document.getElementById("valueDateNaissance").innerHTML = "<p> l'age qu'une personne est née en"+inputValue +" aura en " + nextYear +"c'est à dire  " +age+"</p>" ;
+            }
+           
+       }
+    </script>
+  </body>
+</html>
