@@ -72,7 +72,7 @@ app.listen(4000, function () {
   verificationGLobal([60, 60, 60, 60, 60, 60, 60, 60, 60, 60], 5);
 
   console.log(
-    "\nExemple 5 -- Feux : [55, 29, 26, 12, 19, 39, 18, 20, 23, 28, 56, 20, 59, 48,33, 40, 30, 60, 19] , Vitesse :  25"
+    "\nExemple 6 -- Feux : [55, 29, 26, 12, 19, 39, 18, 20, 23, 28, 56, 20, 59, 48,33, 40, 30, 60, 19] , Vitesse :  25"
   );
 
   verificationGLobal(
